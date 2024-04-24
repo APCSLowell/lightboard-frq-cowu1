@@ -16,9 +16,9 @@ public class LightBoard
       for (int c = 0; c < numCols; c++){
         if (Math.random()<=0.4){
         lights[r][c] = true;
-      } else {
           lights[r][c] = false;
     }
+  }
   }
   }
 
@@ -35,12 +35,10 @@ public class LightBoard
       }
       if (lights[row][col]==true && count%2==0){
         return false;
-      }else if (lights[row][col]== false && count%3){
+      }else if (lights[row][col]== false && count%3==0){
       return true;
-  } else {
+      }
     return lights[row][col];
- 
-  }
   }
   public boolean[][] getLights()
   {
